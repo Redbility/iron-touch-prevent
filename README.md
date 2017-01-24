@@ -6,13 +6,13 @@ Polymer element that adds a class in a component to create specific behaviors on
 
 ### Usage
 
-You need add a link to the component in your component:
+You need add a link to the component in your polymer element:
 
 ```html
 <link rel="import" href="bower_components/iron-touch-prevent/iron-touch-prevent.html"/>
 ```
 
-After, you must add a new behavior in your polymer element:
+After, you must add a new behavior in your element:
 
 ```html
 <link rel="import" href="bower_components/polymer/polymer.html"/>
