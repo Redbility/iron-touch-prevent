@@ -1,0 +1,26 @@
+{
+  "name": "iron-touch-prevent",
+  "version": "1.0.0",
+  "authors": [
+    "Óscar Solás <oscarsolas@gmail.com>",
+    "Redbility <oscar.solas@redbility.com>"
+  ],
+  "description": "Polymer element that adds a class in a component to create specific behaviors on touch screens",
+  "main": [
+    "iron-touch-prevent.html"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Redbility/iron-touch-prevent",
+  "ignore": [
+    "bower_components",
+    "source"
+  ],
+  "keywords": [
+    "web-components",
+    "prevent",
+    "touch"
+  ],
+  "dependencies": {
+    "polymer": "polymer/polymer#^v1.2.0"
+  }
+}
