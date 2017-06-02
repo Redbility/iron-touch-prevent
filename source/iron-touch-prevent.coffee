@@ -2,13 +2,12 @@ Polymer.IronTouchPrevent = {
 	ready: ->
 		# vars
 		module = this
-		links = module.querySelectorAll 'a'
 		module.is_touch_device = 'ontouchstart' in document.documentElement
 
 		if module.is_touch_device
-			module.classList.add 'touch'
+			@_addTouchClass()
 		else
-			module.classList.add 'noTouch'
+			@_removeTouchClass()
 
 		@_mouseStart()
 		@_touchStart()
@@ -34,20 +33,13 @@ Polymer.IronTouchPrevent = {
 	_mouseStart: ->
 		# vars
 		module = this
-		module.preventMouseMove = false
-
-		module.addEventListener 'touchstart', (e) ->
-			e.stopPropagation()
-			module.preventMouseMove = true
 
 		module.addEventListener 'mousemove', (e) ->
-			e.stopPropagation()
-			if module.preventMouseMove == false
-				module._removeTouchClass()
+			if (e.movementX != 0 || e.movementY != 0)
+				if (e.movementX != undefined || e.movementY != undefined)
+					module._removeTouchClass()
 
 		module.addEventListener 'click', (e) ->
-			e.stopPropagation()
-			module.preventMouseMove = false
 
 	_touchStart: ->
 		# vars
